@@ -2,33 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Your Moving Companion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <form id="form-container" class="form-container">
-        <label for="street">Street: </label><input type="text" id="street" value="">
-        <label for="city">City: </label><input type="text" id="city" value="">
-        <button id="submit-btn">Submit</button>
-    </form>
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <a class="navbar-brand" href="#">Move Planner</a>
+    <ul class="nav navbar-nav pull-xs-right">
+        <li class="nav-item">
+            <a class="nav-link" href="https://github.com/slooptb/move-planner" title="View source on GitHub"><i class="fa fa-github fa-2x"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/slooptb" title="Tom on LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/SloopTomB" title="Tom on Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://plus.google.com/u/0/113719955138657019890" title="Tom on Google+"><i class="fa fa-google-plus fa-2x"></i></a>
+        </li>
+    </ul>
+</nav>
 
-    <hr>
-
-    <h2 id="greeting" class="greeting">Where do you want to live?</h2>
-
-
-    <div class="wikipedia-container">
-        <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
-        <ul id="wikipedia-links">Type in an address above and find relevant Wikipedia articles here!</ul>
+<div class="container">
+    <div class="jumbotron text-xs-center">
+        <h1 id="greeting">So, where would you like to live?</h1>
+        <form id="form-container" class="form-inline text-xs-center">
+            <div class="form-group">
+                <label class="sr-only" for="street">Street address</label>
+                <input type="text" class="form-control" id="street" placeholder="Street address">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="city">City</label>
+                <input type="text" class="form-control" id="city" placeholder="City">
+            </div>
+            <button type="submit" class="btn btn-primary">Go</button>
+        </form>
     </div>
 
 
-    <div class="nytimes-container">
-        <h3 id="nytimes-header">New York Times Articles</h3>
-        <ul id="nytimes-articles" class="article-list">
-            What's going on in your new city? Enter an address and hit submit and the NY Times will tell you here!</ul>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4><span class="label label-default">New York Times Articles</span></h4>
+            <div id="nytimes-articles" class="list-group">
+                Find the latest New York Times articles from your desired move city here!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h4><span class="label label-default">Relevant Wikipedia Links</span></h4>
+            <div id="wikipedia-links" class="list-group">
+                Relevant Wikipedia links will show up here!
+            </div>
+        </div>
     </div>
+</div>
+
+
 
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/script.js"></script>

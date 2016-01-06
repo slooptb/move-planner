@@ -7,7 +7,5 @@ A personal project serving as an introduction to AJAX and APIs as part of Udacit
 - Background image generation based on desired location
 - New York Times API integration
 - Wikipedia API integration
-
-## Ideas to extend
-
-- TBA...
+- New search functionality
+- An excuse to investigate Bootstrap 4 :)
